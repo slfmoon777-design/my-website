@@ -597,4 +597,92 @@ a {
     }
 
 }
+   /* =========================================
+   GAMING GRID BACKGROUND
+   ========================================= */
+
+.gaming-hero::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(166, 0, 255, 0.06) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(166, 0, 255, 0.06) 1px,
+            transparent 1px
+        );
+
+    background-size: 60px 60px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent 85%
+    );
+
+    animation: gridMove 12s linear infinite;
+
+    pointer-events: none;
+}
+
+@keyframes gridMove {
+
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 60px 60px;
+    }
+
+}
+
+
+/* =========================================
+   NEON SCAN LINE
+   ========================================= */
+
+.gaming-hero-content::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    height: 1px;
+
+    top: 30%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(166,0,255,0.5),
+        transparent
+    );
+
+    animation: scanLine 4s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+@keyframes scanLine {
+
+    0%, 100% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(150px);
+    }
+
+}
 }
