@@ -392,5 +392,209 @@ a {
     .gaming-secondary {
         width: 210px;
     }
+/* =========================================
+   FEATURED GAMES
+   ========================================= */
 
+.featured-games {
+    position: relative;
+    padding: 110px 7%;
+    background: #050507;
+    overflow: hidden;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title p {
+    color: #8c00ff;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.section-title h2 {
+    font-size: clamp(35px, 6vw, 65px);
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+.section-title h2 span {
+    color: #a600ff;
+    text-shadow: 0 0 25px rgba(166,0,255,0.7);
+}
+
+
+/* GAME GRID */
+
+.game-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* GAME CARD */
+
+.game-card {
+    position: relative;
+
+    min-height: 300px;
+
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    background:
+        linear-gradient(
+            145deg,
+            #15121b,
+            #08080b
+        );
+
+    border: 1px solid #29252f;
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    transition: 0.4s ease;
+
+    cursor: pointer;
+}
+
+
+/* Animated glow */
+
+.game-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    top: -70px;
+    right: -70px;
+
+    background: #8c00ff;
+
+    border-radius: 50%;
+
+    filter: blur(80px);
+
+    opacity: 0.12;
+
+    transition: 0.4s;
+}
+
+
+/* Card hover */
+
+.game-card:hover {
+    transform: translateY(-12px);
+
+    border-color: #8c00ff;
+
+    box-shadow:
+        0 15px 45px rgba(140,0,255,0.2);
+}
+
+.game-card:hover::before {
+    opacity: 0.35;
+
+    transform: scale(1.5);
+}
+
+
+/* NUMBER */
+
+.game-number {
+    position: absolute;
+
+    top: 25px;
+    right: 30px;
+
+    font-size: 13px;
+
+    color: #555;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* GAME TITLE */
+
+.game-card h3 {
+    position: relative;
+
+    font-size: 32px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+}
+
+.game-card p {
+    position: relative;
+
+    color: #888;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+/* LINK */
+
+.game-card a {
+    position: relative;
+
+    width: fit-content;
+
+    color: #a600ff;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.game-card a:hover {
+    color: white;
+
+    letter-spacing: 4px;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    .game-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .game-card {
+        min-height: 260px;
+    }
+
+}
 }
