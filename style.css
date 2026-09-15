@@ -349,4 +349,74 @@ nav a:hover {
     .photo-card img {
         height: 230px !important;
     }
+    /* ===== DRONE SERVICES ===== */
+
+.services {
+    padding: 100px 5%;
+    text-align: center;
+    background: #101015;
+}
+
+.services h2 {
+    font-size: 45px;
+    margin: 15px 0 45px;
+}
+
+.service-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: #17171d;
+    padding: 35px 25px;
+    border-radius: 15px;
+    border: 1px solid #25252d;
+    transition: 0.3s;
+    animation: fadeUp 0.8s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: #00aaff;
+    box-shadow: 0 15px 35px rgba(0, 170, 255, 0.15);
+}
+
+.service-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #aaa;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ===== SERVICES MOBILE ===== */
+
+@media (max-width: 900px) {
+    .service-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .services h2 {
+        font-size: 35px;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+
+    
 }
