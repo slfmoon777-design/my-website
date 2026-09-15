@@ -1,6 +1,6 @@
-/* =========================================
-   SKYLENS - PROFESSIONAL DRONE PORTFOLIO
-   ========================================= */
+/* ==============================
+   SKYLENS NEW HOME PAGE
+   ============================== */
 
 * {
     margin: 0;
@@ -14,584 +14,304 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #07090d;
+    background: #05070a;
     color: #ffffff;
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
 }
 
 
-/* =========================================
-   NAVIGATION
-   ========================================= */
+/* ==============================
+   HERO
+   ============================== */
 
-.hero {
+.hero-new {
     min-height: 100vh;
-
-    background:
-        linear-gradient(
-            rgba(0, 0, 0, 0.58),
-            rgba(0, 0, 0, 0.82)
-        ),
-        linear-gradient(135deg, #07111c, #020305);
-
     position: relative;
     overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 75% 45%,
+            rgba(0, 170, 255, 0.15),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #020305 0%,
+            #08111a 50%,
+            #020305 100%
+        );
 }
 
-.hero::after {
+
+/* Decorative glow */
+
+.hero-new::before {
     content: "";
     position: absolute;
-    width: 500px;
-    height: 500px;
+
+    width: 450px;
+    height: 450px;
+
     right: -180px;
-    top: 120px;
+    bottom: -150px;
+
     border-radius: 50%;
-    background: rgba(0, 170, 255, 0.08);
-    filter: blur(80px);
+
+    background: rgba(0, 170, 255, 0.12);
+
+    filter: blur(90px);
 }
 
-.hero nav {
-    height: 80px;
-    padding: 0 7%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    background: rgba(0, 0, 0, 0.45);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+/* ==============================
+   NAVBAR
+   ============================== */
+
+.navbar {
+    height: 85px;
+
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     position: relative;
     z-index: 10;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .logo {
-    font-size: 25px;
+    font-size: 27px;
     font-weight: bold;
+
     letter-spacing: 4px;
 }
 
-.menu {
+.nav-links {
     display: flex;
-    gap: 30px;
+    gap: 32px;
 }
 
-.menu a {
-    color: #ddd;
-    font-size: 15px;
+.nav-links a {
+    color: #cccccc;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
     transition: 0.3s;
 }
 
-.menu a:hover {
+.nav-links a:hover {
     color: #00aaff;
 }
 
 
-/* =========================================
+/* ==============================
    HERO CONTENT
-   ========================================= */
+   ============================== */
 
-.hero-content {
-    max-width: 900px;
+.hero-new-content {
+    max-width: 1000px;
+
     margin: auto;
+
     padding: 190px 25px 100px;
+
     text-align: center;
+
     position: relative;
     z-index: 2;
 }
 
-.hero-small {
+.hero-label {
     color: #00aaff;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 5px;
-    margin-bottom: 22px;
-}
 
-.hero-content h1 {
-    font-size: clamp(48px, 8vw, 82px);
-    line-height: 1.05;
-    letter-spacing: -2px;
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 5px;
+
     margin-bottom: 25px;
 }
 
-.hero-content > p:not(.hero-small) {
-    max-width: 650px;
-    margin: auto;
-    color: #b8b8b8;
-    font-size: 18px;
+.hero-new-content h1 {
+    font-size: clamp(50px, 8vw, 90px);
+
+    line-height: 0.98;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 30px;
 }
 
-.hero-buttons {
+.hero-new-content h1 span {
+    color: #00aaff;
+}
+
+.hero-description {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #a5a5a5;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   BUTTONS
+   ============================== */
+
+.hero-new-buttons {
     margin-top: 40px;
+
     display: flex;
+
     justify-content: center;
+
     gap: 15px;
+
     flex-wrap: wrap;
 }
 
-.hero-button,
-.outline-button,
-.portfolio-button,
-.cta-button {
-    display: inline-block;
-    padding: 14px 28px;
+.primary-btn,
+.secondary-btn {
+    padding: 15px 30px;
+
     border-radius: 7px;
+
+    text-decoration: none;
+
     font-size: 15px;
+
     font-weight: bold;
+
     transition: 0.3s;
 }
 
-.hero-button {
+.primary-btn {
     background: #00aaff;
+
     color: white;
+
+    box-shadow:
+        0 8px 30px rgba(0, 170, 255, 0.2);
 }
 
-.hero-button:hover {
-    background: #0088cc;
-    transform: translateY(-3px);
+.primary-btn:hover {
+    background: #008dcc;
+
+    transform: translateY(-4px);
 }
 
-.outline-button {
+.secondary-btn {
     color: white;
-    border: 1px solid #555;
+
+    border: 1px solid #444;
+
     background: rgba(255,255,255,0.03);
 }
 
-.outline-button:hover {
+.secondary-btn:hover {
+    color: #00aaff;
+
     border-color: #00aaff;
-    color: #00aaff;
-    transform: translateY(-3px);
+
+    transform: translateY(-4px);
 }
 
 
-/* =========================================
-   GENERAL SECTION
-   ========================================= */
+/* ==============================
+   ANIMATION
+   ============================== */
 
-.small-title {
-    color: #00aaff;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 4px;
+.hero-new-content {
+    animation: heroAppear 1s ease;
 }
 
-.intro {
-    padding: 110px 20px;
-    text-align: center;
-    background: #080a0f;
-}
+@keyframes heroAppear {
 
-.intro h2 {
-    max-width: 800px;
-    margin: 15px auto 20px;
-    font-size: clamp(35px, 5vw, 55px);
-    line-height: 1.1;
-}
-
-.intro p:not(.small-title) {
-    max-width: 650px;
-    margin: auto;
-    color: #999;
-    font-size: 17px;
-}
-
-
-/* =========================================
-   SERVICES
-   ========================================= */
-
-.services {
-    padding: 110px 5%;
-    text-align: center;
-    background: #0c0f14;
-}
-
-.services h2 {
-    font-size: clamp(35px, 5vw, 50px);
-    margin: 12px 0 55px;
-}
-
-.service-container {
-    max-width: 1200px;
-    margin: auto;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.service-card {
-    padding: 38px 25px;
-    background: #11151b;
-    border: 1px solid #202832;
-    border-radius: 12px;
-
-    transition: 0.35s;
-}
-
-.service-card:hover {
-    transform: translateY(-8px);
-    border-color: #00aaff;
-    box-shadow: 0 15px 40px rgba(0,170,255,0.12);
-}
-
-.service-icon {
-    font-size: 42px;
-    margin-bottom: 20px;
-}
-
-.service-card h3 {
-    font-size: 19px;
-    margin-bottom: 12px;
-}
-
-.service-card p {
-    color: #8f969d;
-    font-size: 14px;
-}
-
-
-/* =========================================
-   FEATURED WORK
-   ========================================= */
-
-.featured {
-    padding: 110px 5%;
-    text-align: center;
-    background: #080a0f;
-}
-
-.featured h2 {
-    font-size: clamp(35px, 5vw, 50px);
-    margin: 12px 0;
-}
-
-.featured-intro {
-    color: #888;
-    margin-bottom: 50px;
-}
-
-.featured-grid {
-    max-width: 1200px;
-    margin: 0 auto 45px;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
-
-.featured-card {
-    position: relative;
-    height: 360px;
-    overflow: hidden;
-    border-radius: 12px;
-    background: #111;
-}
-
-.featured-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-
-    transition: 0.5s;
-}
-
-.featured-card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-
-    background:
-        linear-gradient(
-            transparent 35%,
-            rgba(0,0,0,0.9)
-        );
-
-    pointer-events: none;
-}
-
-.featured-card:hover img {
-    transform: scale(1.08);
-}
-
-.featured-info {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: 2;
-
-    width: 100%;
-    padding: 25px;
-    text-align: left;
-}
-
-.featured-info h3 {
-    font-size: 22px;
-    margin-bottom: 4px;
-}
-
-.featured-info p {
-    color: #bbb;
-    font-size: 14px;
-}
-
-.portfolio-button {
-    background: #00aaff;
-    color: white;
-}
-
-.portfolio-button:hover {
-    background: #0088cc;
-    transform: translateY(-3px);
-}
-
-
-/* =========================================
-   ABOUT SKYLENS
-   ========================================= */
-
-.about-drone {
-    padding: 110px 20px;
-    text-align: center;
-    background: #0c0f14;
-}
-
-.about-drone h2 {
-    font-size: clamp(40px, 6vw, 65px);
-    margin: 12px 0 25px;
-    letter-spacing: 3px;
-}
-
-.about-drone > p:not(.small-title) {
-    max-width: 700px;
-    margin: auto;
-    color: #999;
-    font-size: 17px;
-}
-
-.about-stats {
-    max-width: 900px;
-    margin: 55px auto 0;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.about-stats div {
-    padding: 30px;
-    background: #11151b;
-    border: 1px solid #202832;
-    border-radius: 12px;
-    transition: 0.3s;
-}
-
-.about-stats div:hover {
-    border-color: #00aaff;
-    transform: translateY(-6px);
-}
-
-.about-stats strong {
-    display: block;
-    color: #00aaff;
-    font-size: 30px;
-    margin-bottom: 8px;
-}
-
-.about-stats span {
-    color: #ccc;
-    font-size: 14px;
-}
-
-
-/* =========================================
-   CTA
-   ========================================= */
-
-.drone-cta {
-    padding: 110px 20px;
-    text-align: center;
-
-    background:
-        linear-gradient(
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.8)
-        ),
-        #07121c;
-}
-
-.drone-cta h2 {
-    max-width: 800px;
-    margin: 15px auto 18px;
-    font-size: clamp(35px, 5vw, 55px);
-    line-height: 1.15;
-}
-
-.drone-cta p:not(.small-title) {
-    max-width: 650px;
-    margin: auto auto 30px;
-    color: #aaa;
-}
-
-.cta-button {
-    background: #00aaff;
-    color: white;
-}
-
-.cta-button:hover {
-    background: #0088cc;
-    transform: translateY(-3px);
-}
-
-
-/* =========================================
-   FOOTER
-   ========================================= */
-
-.footer {
-    padding: 65px 20px 30px;
-    text-align: center;
-    background: #040507;
-    border-top: 1px solid #1c2229;
-}
-
-.footer h2 {
-    font-size: 28px;
-    letter-spacing: 4px;
-    margin-bottom: 8px;
-}
-
-.footer > p {
-    color: #777;
-}
-
-.footer-links {
-    margin: 25px 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
-}
-
-.footer-links a {
-    color: #aaa;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.footer-links a:hover {
-    color: #00aaff;
-}
-
-.footer .copyright {
-    padding-top: 25px;
-    border-top: 1px solid #181c21;
-    font-size: 13px;
-    color: #555;
-}
-
-
-/* =========================================
-   ANIMATIONS
-   ========================================= */
-
-.hero-content,
-.intro,
-.services,
-.featured,
-.about-drone,
-.drone-cta {
-    animation: fadeUp 0.8s ease;
-}
-
-@keyframes fadeUp {
     from {
         opacity: 0;
-        transform: translateY(25px);
+
+        transform: translateY(30px);
     }
 
     to {
         opacity: 1;
+
         transform: translateY(0);
     }
-}
-
-
-/* =========================================
-   TABLET
-   ========================================= */
-
-@media (max-width: 950px) {
-
-    .service-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .featured-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
 }
 
 
-/* =========================================
+/* ==============================
    MOBILE
-   ========================================= */
+   ============================== */
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
 
-    .hero nav {
+    .navbar {
         height: auto;
+
         padding: 20px;
+
         flex-direction: column;
+
         gap: 18px;
     }
 
-    .menu {
-        gap: 16px;
+    .nav-links {
+        gap: 18px;
+
         flex-wrap: wrap;
+
         justify-content: center;
     }
 
-    .menu a {
+    .nav-links a {
         font-size: 13px;
     }
 
-    .hero-content {
-        padding: 120px 20px 80px;
+    .hero-new-content {
+        padding: 120px 20px 70px;
     }
 
-    .hero-content h1 {
-        letter-spacing: -1px;
-    }
+    .hero-label {
+        font-size: 9px;
 
-    .hero-small {
-        font-size: 10px;
         letter-spacing: 3px;
     }
 
-    .service-container,
-    .featured-grid,
-    .about-stats {
-        grid-template-columns: 1fr;
+    .hero-new-content h1 {
+        font-size: 48px;
+
+        letter-spacing: -2px;
     }
 
-    .featured-card {
-        height: 300px;
+    .hero-description {
+        font-size: 16px;
     }
 
-    .intro,
-    .services,
-    .featured,
-    .about-drone,
-    .drone-cta {
-        padding-top: 80px;
-        padding-bottom: 80px;
+    .hero-new-buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 210px;
     }
 
 }
