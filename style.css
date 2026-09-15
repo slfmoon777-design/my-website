@@ -1,6 +1,6 @@
-/* ==============================
-   SKYLENS NEW HOME PAGE
-   ============================== */
+/* =========================================
+   GAMEHUB - DARK GAMING WEBSITE
+   ========================================= */
 
 * {
     margin: 0;
@@ -14,60 +14,82 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #05070a;
+    background: #050507;
     color: #ffffff;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
 }
 
 
-/* ==============================
-   HERO
-   ============================== */
+/* =========================================
+   GAMING HERO
+   ========================================= */
 
-.hero-new {
+.gaming-hero {
     min-height: 100vh;
     position: relative;
     overflow: hidden;
 
     background:
         radial-gradient(
-            circle at 75% 45%,
-            rgba(0, 170, 255, 0.15),
-            transparent 35%
+            circle at 50% 45%,
+            rgba(120, 0, 255, 0.13),
+            transparent 32%
         ),
         linear-gradient(
             135deg,
-            #020305 0%,
-            #08111a 50%,
-            #020305 100%
+            #030305,
+            #0b0710 50%,
+            #020204
         );
 }
 
 
-/* Decorative glow */
+/* Animated background glow */
 
-.hero-new::before {
+.gaming-hero::before {
     content: "";
+
     position: absolute;
 
-    width: 450px;
-    height: 450px;
+    width: 550px;
+    height: 550px;
 
-    right: -180px;
-    bottom: -150px;
+    left: 50%;
+    top: 40%;
+
+    transform: translate(-50%, -50%);
 
     border-radius: 50%;
 
-    background: rgba(0, 170, 255, 0.12);
+    background: rgba(120, 0, 255, 0.08);
 
-    filter: blur(90px);
+    filter: blur(100px);
+
+    animation: glowMove 5s ease-in-out infinite alternate;
+}
+
+@keyframes glowMove {
+
+    from {
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    to {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
 }
 
 
-/* ==============================
-   NAVBAR
-   ============================== */
+/* =========================================
+   NAVIGATION
+   ========================================= */
 
-.navbar {
+.gaming-nav {
     height: 85px;
 
     padding: 0 7%;
@@ -79,57 +101,84 @@ body {
     position: relative;
     z-index: 10;
 
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.55);
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(10px);
 }
 
-.logo {
+.gaming-logo {
     font-size: 27px;
-    font-weight: bold;
 
-    letter-spacing: 4px;
+    font-weight: 900;
+
+    letter-spacing: 3px;
 }
 
-.nav-links {
+.gaming-logo span {
+    color: #8c00ff;
+}
+
+.gaming-menu {
     display: flex;
-    gap: 32px;
+
+    gap: 30px;
 }
 
-.nav-links a {
-    color: #cccccc;
-
-    text-decoration: none;
+.gaming-menu a {
+    color: #aaa;
 
     font-size: 14px;
+
+    font-weight: bold;
 
     transition: 0.3s;
 }
 
-.nav-links a:hover {
-    color: #00aaff;
+.gaming-menu a:hover {
+    color: #a600ff;
+
+    text-shadow:
+        0 0 12px rgba(166,0,255,0.8);
 }
 
 
-/* ==============================
+/* =========================================
    HERO CONTENT
-   ============================== */
+   ========================================= */
 
-.hero-new-content {
-    max-width: 1000px;
+.gaming-hero-content {
+    max-width: 950px;
 
     margin: auto;
 
-    padding: 190px 25px 100px;
+    padding: 150px 25px 100px;
 
     text-align: center;
 
     position: relative;
     z-index: 2;
+
+    animation: heroIn 1s ease;
 }
 
-.hero-label {
-    color: #00aaff;
+@keyframes heroIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.gaming-label {
+    color: #a600ff;
 
     font-size: 12px;
 
@@ -138,40 +187,52 @@ body {
     letter-spacing: 5px;
 
     margin-bottom: 25px;
+
+    text-shadow:
+        0 0 15px rgba(166,0,255,0.7);
 }
 
-.hero-new-content h1 {
-    font-size: clamp(50px, 8vw, 90px);
+.gaming-hero-content h1 {
+    font-size: clamp(55px, 9vw, 100px);
 
-    line-height: 0.98;
+    line-height: 0.92;
 
-    letter-spacing: -3px;
+    letter-spacing: -4px;
+
+    font-weight: 900;
 
     margin-bottom: 30px;
+
+    text-shadow:
+        0 0 30px rgba(255,255,255,0.08);
 }
 
-.hero-new-content h1 span {
-    color: #00aaff;
+.gaming-hero-content h1 span {
+    color: #a600ff;
+
+    text-shadow:
+        0 0 20px rgba(166,0,255,0.8),
+        0 0 50px rgba(166,0,255,0.35);
 }
 
-.hero-description {
+.gaming-description {
     max-width: 650px;
 
     margin: auto;
 
-    color: #a5a5a5;
+    color: #999;
 
-    font-size: 18px;
+    font-size: 17px;
 
     line-height: 1.7;
 }
 
 
-/* ==============================
+/* =========================================
    BUTTONS
-   ============================== */
+   ========================================= */
 
-.hero-new-buttons {
+.gaming-buttons {
     margin-top: 40px;
 
     display: flex;
@@ -183,37 +244,38 @@ body {
     flex-wrap: wrap;
 }
 
-.primary-btn,
-.secondary-btn {
+.gaming-primary,
+.gaming-secondary {
     padding: 15px 30px;
 
-    border-radius: 7px;
+    border-radius: 6px;
 
-    text-decoration: none;
-
-    font-size: 15px;
+    font-size: 14px;
 
     font-weight: bold;
 
     transition: 0.3s;
 }
 
-.primary-btn {
-    background: #00aaff;
-
+.gaming-primary {
     color: white;
 
+    background: #8c00ff;
+
     box-shadow:
-        0 8px 30px rgba(0, 170, 255, 0.2);
+        0 0 20px rgba(140,0,255,0.35);
 }
 
-.primary-btn:hover {
-    background: #008dcc;
+.gaming-primary:hover {
+    background: #a600ff;
 
-    transform: translateY(-4px);
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 35px rgba(166,0,255,0.65);
 }
 
-.secondary-btn {
+.gaming-secondary {
     color: white;
 
     border: 1px solid #444;
@@ -221,47 +283,64 @@ body {
     background: rgba(255,255,255,0.03);
 }
 
-.secondary-btn:hover {
-    color: #00aaff;
+.gaming-secondary:hover {
+    color: #a600ff;
 
-    border-color: #00aaff;
+    border-color: #a600ff;
 
-    transform: translateY(-4px);
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 20px rgba(166,0,255,0.2);
 }
 
 
-/* ==============================
-   ANIMATION
-   ============================== */
+/* =========================================
+   SCROLL INDICATOR
+   ========================================= */
 
-.hero-new-content {
-    animation: heroAppear 1s ease;
+.hero-scroll {
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: #555;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    z-index: 5;
+
+    animation: scrollPulse 2s infinite;
 }
 
-@keyframes heroAppear {
+@keyframes scrollPulse {
 
-    from {
-        opacity: 0;
-
-        transform: translateY(30px);
+    0%, 100% {
+        opacity: 0.35;
+        transform: translateX(-50%) translateY(0);
     }
 
-    to {
+    50% {
         opacity: 1;
-
-        transform: translateY(0);
+        transform: translateX(-50%) translateY(8px);
     }
 
 }
 
 
-/* ==============================
+/* =========================================
    MOBILE
-   ============================== */
+   ========================================= */
 
 @media (max-width: 700px) {
 
-    .navbar {
+    .gaming-nav {
         height: auto;
 
         padding: 20px;
@@ -271,7 +350,7 @@ body {
         gap: 18px;
     }
 
-    .nav-links {
+    .gaming-menu {
         gap: 18px;
 
         flex-wrap: wrap;
@@ -279,38 +358,38 @@ body {
         justify-content: center;
     }
 
-    .nav-links a {
-        font-size: 13px;
+    .gaming-menu a {
+        font-size: 12px;
     }
 
-    .hero-new-content {
-        padding: 120px 20px 70px;
+    .gaming-hero-content {
+        padding: 120px 20px 100px;
     }
 
-    .hero-label {
+    .gaming-label {
         font-size: 9px;
 
         letter-spacing: 3px;
     }
 
-    .hero-new-content h1 {
-        font-size: 48px;
+    .gaming-hero-content h1 {
+        font-size: 52px;
 
         letter-spacing: -2px;
     }
 
-    .hero-description {
-        font-size: 16px;
+    .gaming-description {
+        font-size: 15px;
     }
 
-    .hero-new-buttons {
+    .gaming-buttons {
         flex-direction: column;
 
         align-items: center;
     }
 
-    .primary-btn,
-    .secondary-btn {
+    .gaming-primary,
+    .gaming-secondary {
         width: 210px;
     }
 
