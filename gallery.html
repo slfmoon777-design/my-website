@@ -8,6 +8,21 @@
 </head>
 
 <body>
+    <div id="imageViewer" class="image-viewer" onclick="closeImage()">
+    <span class="close">&times;</span>
+    <img id="largeImage" src="" alt="Large Image">
+</div>
+
+<script>
+function openImage(imageSource) {
+    document.getElementById("imageViewer").style.display = "flex";
+    document.getElementById("largeImage").src = imageSource;
+}
+
+function closeImage() {
+    document.getElementById("imageViewer").style.display = "none";
+}
+</script>
 
 <header>
     <h1>Gallery</h1>
@@ -33,7 +48,8 @@
     <div class="gallery">
 
         <div class="photo-card">
-            <img src="https://slfmoon777-design.github.io/my-website/photo1.jpg" alt="Photo 1">
+            <img src="https://slfmoon777-design.github.io/my-website/photo1.jpg" alt="Photo 1" onclick="openImage(this.src)">
+
             <div class="photo-info">
                 <h3>Photo One</h3>
                 <p>Beautiful moment</p>
@@ -41,7 +57,7 @@
         </div>
 
         <div class="photo-card">
-            <img src="https://slfmoon777-design.github.io/my-website/photo2.jpg" alt="Photo 2">
+            <img src="https://slfmoon777-design.github.io/my-website/photo2.jpg" alt="Photo 2" onclick="openImage(this.src)">
             <div class="photo-info">
                 <h3>Photo Two</h3>
                 <p>Creative photography</p>
@@ -49,7 +65,7 @@
         </div>
 
         <div class="photo-card">
-            <img src="https://slfmoon777-design.github.io/my-website/photo3.jpg" alt="Photo 3">
+            <img src="https://slfmoon777-design.github.io/my-website/photo3.jpg" alt="Photo 3" onclick="openImage(this.src)">
             <div class="photo-info">
                 <h3>Photo Three</h3>
                 <p>Special memories</p>
