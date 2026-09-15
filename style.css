@@ -1,14 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    text-align: center;
+    background: #0b0b0f;
+    color: #f5f5f5;
 }
 
+/* ===== HEADER ===== */
+
 header {
-    background-color: black;
+    background: linear-gradient(135deg, #050505, #17171d);
     color: white;
     padding: 60px 20px;
+    text-align: center;
 }
 
 header h1 {
@@ -20,92 +27,31 @@ header p {
     font-size: 20px;
 }
 
-main {
-    padding: 80px 20px;
-}
+/* ===== NAVIGATION ===== */
 
-main h2 {
-    font-size: 35px;
+nav {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 18px 20px;
+    text-align: center;
 }
-
-main p {
-    font-size: 18px;
-}
-
-button {
-    background-color: black;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
 
 nav a {
     color: white;
     text-decoration: none;
     margin: 0 20px;
     font-size: 17px;
+    transition: 0.3s;
 }
 
 nav a:hover {
     color: #00aaff;
 }
-.gallery {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 30px;
-}
 
-.gallery img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 12px;
-    transition: 0.3s;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
-}
-form {
-    max-width: 500px;
-    margin: 30px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-form label {
-    text-align: left;
-    font-weight: bold;
-}
-
-form input,
-form textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
-}
-
-form textarea {
-    height: 150px;
-    resize: vertical;
-}
-
-form button {
-    margin-top: 10px;
-}
-/* Professional Homepage */
+/* ===== HOME HERO ===== */
 
 .hero {
     min-height: 100vh;
-    background: linear-gradient(135deg, #111, #333);
+    background: linear-gradient(135deg, #050505, #17171d);
     color: white;
 }
 
@@ -114,7 +60,7 @@ form button {
     justify-content: space-between;
     align-items: center;
     padding: 25px 8%;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .logo {
@@ -124,19 +70,12 @@ form button {
 }
 
 .menu a {
-    color: white;
-    text-decoration: none;
     margin-left: 25px;
-    font-size: 16px;
-}
-
-.menu a:hover {
-    color: #00aaff;
 }
 
 .hero-content {
     text-align: center;
-    padding-top: 180px;
+    padding: 180px 20px 80px;
 }
 
 .hero-content h1 {
@@ -149,7 +88,8 @@ form button {
     margin-bottom: 35px;
 }
 
-.hero-button {
+.hero-button,
+.portfolio-button {
     display: inline-block;
     background: #00aaff;
     color: white;
@@ -157,155 +97,83 @@ form button {
     padding: 15px 30px;
     border-radius: 8px;
     font-size: 17px;
-}
-
-.hero-button:hover {
-    background: #0088cc;
-}
-
-.welcome {
-    text-align: center;
-    padding: 80px 20px;
-}
-
-.welcome h2 {
-    font-size: 40px;
-}
-
-.welcome p {
-    font-size: 18px;
-    color: #555;
-}
-/* Professional Gallery */
-
-.gallery-section {
-    padding: 70px 8%;
-    text-align: center;
-}
-
-.gallery-section h2 {
-    font-size: 42px;
-    margin-bottom: 10px;
-}
-
-.gallery-intro {
-    color: #666;
-    margin-bottom: 40px;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.photo-card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
     transition: 0.3s;
 }
 
-.photo-card:hover {
-    transform: translateY(-10px);
+.hero-button:hover,
+.portfolio-button:hover {
+    background: #0088cc;
+    transform: translateY(-3px);
 }
 
-.photo-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    display: block;
-}
+/* ===== DRONE PORTFOLIO ===== */
 
-.photo-info {
-    padding: 20px;
-}
-
-.photo-info h3 {
-    margin: 0 0 8px;
-    font-size: 22px;
-}
-
-.photo-info p {
-    margin: 0;
-    color: #666;
-}
-@media (max-width: 800px) {
-
-    .gallery {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery-section {
-        padding: 50px 20px;
-    }
-
-    .gallery-section h2 {
-        font-size: 32px;
-    }
-
-}
-.gallery-section {
-    padding: 70px 8%;
+.welcome,
+.drone-portfolio {
     text-align: center;
+    padding: 100px 20px;
+    background: #0b0b0f;
+}
+
+.small-title {
+    color: #00aaff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.drone-portfolio h2 {
+    font-size: 45px;
+    max-width: 800px;
+    margin: 15px auto 20px;
+}
+
+.drone-portfolio > p:not(.small-title) {
+    color: #aaa;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+/* ===== GALLERY ===== */
+
+.gallery-section {
+    padding: 70px 5%;
+    text-align: center;
+    background: #0b0b0f;
+}
+
+.gallery-section h2 {
+    font-size: 40px;
+}
+
+.gallery-intro {
+    color: #aaa;
+    margin-bottom: 40px;
 }
 
 .gallery {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 30px;
+    gap: 30px !important;
     max-width: 1200px;
     margin: 40px auto;
 }
 
 .photo-card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-}
-
-.photo-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    display: block;
-}
-
-.photo-info {
-    padding: 20px;
-}
-
-.photo-info h3 {
-    margin: 0 0 8px;
-}
-
-.photo-info p {
-    margin: 0;
-    color: #666;
-}
-
-@media (max-width: 800px) {
-    .gallery {
-        grid-template-columns: 1fr !important;
-    }
-}
-.gallery {
-    display: flex !important;
-    flex-direction: row !important;
-    gap: 30px !important;
     width: 100% !important;
-    justify-content: center !important;
-}
-
-.photo-card {
-    width: 30% !important;
-    background: white;
+    background: #17171d;
     border-radius: 15px;
     overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    animation: fadeUp 0.8s ease;
+    transition: 0.3s;
+}
+
+.photo-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 170, 255, 0.2);
 }
 
 .photo-card img {
@@ -313,162 +181,42 @@ form button {
     height: 250px !important;
     object-fit: cover;
     display: block;
-}
-/* GALLERY */
-
-.gallery-section {
-    padding: 60px 5%;
-    text-align: center;
-}
-
-.gallery-section h2 {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-.gallery-intro {
-    color: #666;
-    margin-bottom: 35px;
-}
-
-.gallery {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    gap: 30px !important;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.photo-card {
-    flex: 1 1 0 !important;
-    width: 33.33% !important;
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-}
-
-.photo-card img {
-    width: 100% !important;
-    height: 250px !important;
-    object-fit: cover;
-    display: block;
-}
-
-.photo-info {
-    padding: 20px;
-}
-
-.photo-info h3 {
-    margin: 0 0 8px;
-}
-
-.photo-info p {
-    margin: 0;
-    color: #666;
-}
-
-/* MOBILE */
-
-@media (max-width: 700px) {
-
-    .gallery {
-        flex-direction: column !important;
-    }
-
-    .photo-card {
-        width: 100% !important;
-    }
-
-}
-/* IMAGE VIEWER */
-
-.image-viewer {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    justify-content: center;
-    align-items: center;
-}
-
-.image-viewer img {
-    max-width: 90%;
-    max-height: 85%;
-    object-fit: contain;
-    border-radius: 8px;
-}
-
-.close {
-    position: absolute;
-    top: 20px;
-    right: 35px;
-    color: white;
-    font-size: 45px;
     cursor: pointer;
 }
-.gallery {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 30px !important;
-    max-width: 1200px;
-    margin: 30px auto;
-}
-
-.photo-card {
-    width: 100% !important;
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-}
-
-.photo-card img {
-    width: 100% !important;
-    height: 250px !important;
-    object-fit: cover;
-    display: block;
-}
 
 .photo-info {
     padding: 20px;
 }
 
-@media (max-width: 700px) {
-    .gallery {
-        grid-template-columns: 1fr !important;
-    }
+.photo-info h3 {
+    margin: 0 0 8px;
 }
-/* CONTACT PAGE */
+
+.photo-info p {
+    margin: 0;
+    color: #aaa;
+}
+
+/* ===== CONTACT ===== */
 
 .contact-section {
     padding: 70px 20px;
     text-align: center;
-}
-
-.contact-section h2 {
-    font-size: 40px;
-    margin-bottom: 10px;
+    background: #0b0b0f;
 }
 
 .contact-intro {
-    color: #666;
+    color: #aaa;
     margin-bottom: 35px;
 }
 
 .contact-form {
     max-width: 550px;
-    margin: 0 auto;
+    margin: auto;
     padding: 35px;
-    background: white;
+    background: #17171d;
     border-radius: 15px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -482,10 +230,11 @@ form button {
 .contact-form input,
 .contact-form textarea {
     padding: 14px;
-    border: 1px solid #ddd;
+    background: #0b0b0f;
+    color: white;
+    border: 1px solid #333;
     border-radius: 8px;
     font-size: 16px;
-    font-family: Arial, sans-serif;
 }
 
 .contact-form textarea {
@@ -495,12 +244,20 @@ form button {
 
 .contact-form button {
     margin-top: 10px;
+    padding: 14px;
     background: #00aaff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 .contact-form button:hover {
     background: #0088cc;
 }
+
+/* ===== IMAGE VIEWER ===== */
+
 .image-viewer {
     display: none;
     position: fixed;
@@ -529,76 +286,15 @@ form button {
     font-size: 45px;
     cursor: pointer;
 }
-/* ===== MODERN DARK THEME ===== */
 
-body {
-    background: #0b0b0f;
-    color: #f5f5f5;
-}
-
-header {
-    background: linear-gradient(135deg, #050505, #17171d);
-    color: white;
-}
-
-nav {
-    background: rgba(0, 0, 0, 0.85);
-}
-
-nav a {
-    color: #ffffff;
-}
-
-nav a:hover {
-    color: #00aaff;
-}
-
-.welcome,
-.gallery-section,
-.contact-section {
-    background: #0b0b0f;
-    color: #f5f5f5;
-}
-
-.gallery-intro,
-.contact-intro {
-    color: #aaa;
-}
-
-.photo-card {
-    background: #17171d;
-    color: white;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-}
-
-.photo-info p {
-    color: #aaa;
-}
-
-.contact-form {
-    background: #17171d;
-    color: white;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-}
-
-.contact-form input,
-.contact-form textarea {
-    background: #0b0b0f;
-    color: white;
-    border: 1px solid #333;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-    color: #888;
-}
-/* ===== SMOOTH ANIMATIONS ===== */
+/* ===== ANIMATION ===== */
 
 @keyframes fadeUp {
     from {
         opacity: 0;
         transform: translateY(25px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -609,41 +305,10 @@ nav a:hover {
 .welcome,
 .gallery-section,
 .contact-section {
-    animation: fadeUp 0.8s ease-out;
+    animation: fadeUp 0.8s ease;
 }
 
-.photo-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.photo-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0, 170, 255, 0.2);
-}
-
-.hero-button {
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.hero-button:hover {
-    transform: translateY(-3px);
-}
-@keyframes testAnimation {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.photo-card {
-    animation: testAnimation 1s ease;
-}
-/* ===== MOBILE RESPONSIVE ===== */
+/* ===== MOBILE ===== */
 
 @media (max-width: 700px) {
 
@@ -661,12 +326,12 @@ nav a:hover {
     }
 
     .menu a {
-        margin-left: 0;
+        margin: 0;
         font-size: 14px;
     }
 
     .hero-content {
-        padding: 120px 20px 40px;
+        padding: 120px 20px 60px;
     }
 
     .hero-content h1 {
@@ -684,5 +349,4 @@ nav a:hover {
     .photo-card img {
         height: 230px !important;
     }
-
 }
