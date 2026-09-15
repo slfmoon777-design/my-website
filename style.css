@@ -592,4 +592,40 @@ nav a:hover {
 .contact-form textarea::placeholder {
     color: #888;
 }
+/* ===== SMOOTH ANIMATIONS ===== */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content,
+.welcome,
+.gallery-section,
+.contact-section {
+    animation: fadeUp 0.8s ease-out;
+}
+
+.photo-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 170, 255, 0.2);
+}
+
+.hero-button {
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
+}
 }
