@@ -1,80 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - My Website</title>
+
+    <title>GAMEHUB | Gallery</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div id="imageViewer" class="image-viewer" onclick="closeImage()">
-    <span class="close">&times;</span>
-    <img id="largeImage" src="" alt="Large Image">
-</div>
 
-<script>
-function openImage(imageSource) {
-    document.getElementById("imageViewer").style.display = "flex";
-    document.getElementById("largeImage").src = imageSource;
-}
+    <section class="gallery-page">
 
-function closeImage() {
-    document.getElementById("imageViewer").style.display = "none";
-}
-</script>
+        <nav class="gaming-nav">
 
-<header>
-    <h1>Gallery</h1>
-    <p>Our Photo Gallery</p>
-</header>
-
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-</nav>
-
-<main class="gallery-section">
-    <main class="gallery-section">
-
-
-<h2>My Gallery</h2>
-
-    <h2>My Gallery</h2>
-    <p class="gallery-intro">Explore my favorite photos.</p>
-
-    <div class="gallery">
-
-        <div class="photo-card">
-            <img src="https://slfmoon777-design.github.io/my-website/photo1.jpg" alt="Photo 1" onclick="openImage(this.src)">
-
-            <div class="photo-info">
-                <h3>Photo One</h3>
-                <p>Beautiful moment</p>
+            <div class="gaming-logo">
+                GAME<span>HUB</span>
             </div>
+
+            <div class="gaming-menu">
+                <a href="index.html">Home</a>
+                <a href="games.html">Games</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+        </nav>
+
+
+        <div class="gallery-header">
+
+            <p>VISUAL GAMING WORLD</p>
+
+            <h1>
+                GAME <span>GALLERY</span>
+            </h1>
+
+            <div class="gallery-line"></div>
+
         </div>
 
-        <div class="photo-card">
-            <img src="https://slfmoon777-design.github.io/my-website/photo2.jpg" alt="Photo 2" onclick="openImage(this.src)">
-            <div class="photo-info">
-                <h3>Photo Two</h3>
-                <p>Creative photography</p>
+
+        <div class="gaming-gallery">
+
+            <div class="gallery-card">
+                <img src="photo1.jpg" alt="Gaming Image 1">
+                <div class="gallery-overlay">
+                    <span>01</span>
+                    <h2>GAMING</h2>
+                </div>
             </div>
+
+
+            <div class="gallery-card">
+                <img src="photo2.jpg" alt="Gaming Image 2">
+                <div class="gallery-overlay">
+                    <span>02</span>
+                    <h2>SETUP</h2>
+                </div>
+            </div>
+
+
+            <div class="gallery-card">
+                <img src="photo3.jpg" alt="Gaming Image 3">
+                <div class="gallery-overlay">
+                    <span>03</span>
+                    <h2>BATTLE</h2>
+                </div>
+            </div>
+
         </div>
 
-        <div class="photo-card">
-            <img src="https://slfmoon777-design.github.io/my-website/photo3.jpg" alt="Photo 3" onclick="openImage(this.src)">
-            <div class="photo-info">
-                <h3>Photo Three</h3>
-                <p>Special memories</p>
-            </div>
-        </div>
-
-    </div>
-
-</main>
+    </section>
 
 </body>
+
 </html>
