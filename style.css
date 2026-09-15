@@ -505,5 +505,73 @@ nav a:hover {
         height: 260px;
     }
 
-}    
+} 
+ /* ===== ABOUT SKY LENS ===== */
+
+.about-drone {
+    padding: 100px 20px;
+    text-align: center;
+    background: #101015;
+}
+
+.about-drone h2 {
+    font-size: 50px;
+    margin: 15px 0 25px;
+    letter-spacing: 2px;
+}
+
+.about-drone > p:not(.small-title) {
+    max-width: 700px;
+    margin: 0 auto 45px;
+    color: #aaa;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.about-stats {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.about-stats div {
+    padding: 30px 20px;
+    background: #17171d;
+    border: 1px solid #25252d;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.about-stats div:hover {
+    transform: translateY(-8px);
+    border-color: #00aaff;
+    box-shadow: 0 12px 30px rgba(0, 170, 255, 0.15);
+}
+
+.about-stats strong {
+    display: block;
+    color: #00aaff;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.about-stats span {
+    color: #ddd;
+    font-size: 16px;
+}
+
+/* ===== ABOUT MOBILE ===== */
+
+@media (max-width: 700px) {
+
+    .about-drone h2 {
+        font-size: 40px;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+}   
 }
